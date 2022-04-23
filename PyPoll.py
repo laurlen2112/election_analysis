@@ -20,8 +20,8 @@ total_votes = 0
 candidate_options = []
 
 # declare an empty dictionary
-candidates_votes ={}
-candidate_votes = {"candidate_name1" : votes, "candidate_name2" : votes, "candidate_name3" : votes}
+candidate_votes = {}
+#candidate_votes = {"candidate_name1" : total_votes, "candidate_name2" : total_votes, "candidate_name3" : total_votes}
 
 
 # Open the election results and read the file.
@@ -38,7 +38,7 @@ with open(file_to_load) as election_data:
     for row in csv.reader(election_data):
         #add total votes
         total_votes += 1
-        print(total_votes)
+        #print(total_votes)
 
         #add option to print candidate name
         candidate_name = row[2]
@@ -49,11 +49,28 @@ with open(file_to_load) as election_data:
          #add candidate name to the list
          candidate_options.append(candidate_name)
 
-         #track candidate's vote count
+         #track candidate's vote count; initalize at zero
          candidate_votes[candidate_name] = 0
 
-#print candidate list
-print(candidate_options)
+        #track candidate's votes & add by 1 (and move out of the if statement)
+        candidate_votes[candidate_name] += 1
+
+#print candidate vote dictionary
+print(candidate_votes)
+
+#use a loop to determine the percentage of votes
+## iterate through the candidate list
+for candidate_name in candidate_votes:
+    ##get vote count
+     votes = candidate_votes[candidate_name]
+     ##calc percentage of total votes
+     
+     vote_percentage = float(votes) / float(total_votes) * 100
+     ##print candidates name and percentage of votes
+     print (f"{candidate_name}: received {vote_percentage:.1f}% of the vote.")
+
+
+
 
 
    
