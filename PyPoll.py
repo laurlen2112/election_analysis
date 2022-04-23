@@ -12,6 +12,18 @@ dir(os.path)
 os.path.join("Resources", "election_results.csv")
 # Assign a variable for the file to load and the path.
 file_to_load = os.path.join("Resources", "election_results.csv")
+
+#add the total votes variable and set intial total votes to zero
+total_votes = 0
+
+#candidate options
+candidate_options = []
+
+# declare an empty dictionary
+candidates_votes ={}
+candidate_votes = {"candidate_name1" : votes, "candidate_name2" : votes, "candidate_name3" : votes}
+
+
 # Open the election results and read the file.
 with open(file_to_load) as election_data:
     #to do: read & analyze the data here
@@ -21,12 +33,32 @@ with open(file_to_load) as election_data:
     #print the header row
     headers = next(file_reader)
     print(headers)
-      ##use a for statement to iterate through the rows and pull data including header
-    #for row in csv.reader(election_data):
-        #print(row)
+
+    ##use a for statement to iterate through the rows and pull data including header
+    for row in csv.reader(election_data):
+        #add total votes
+        total_votes += 1
+        print(total_votes)
+
+        #add option to print candidate name
+        candidate_name = row[2]
+
+        #add "if/not in " statement so name only prints once
+        if candidate_name not in candidate_options:
+         
+         #add candidate name to the list
+         candidate_options.append(candidate_name)
+
+         #track candidate's vote count
+         candidate_votes[candidate_name] = 0
+
+#print candidate list
+print(candidate_options)
+
+
    
-    # Create a filename variable to a direct or indirect path to the file.
-    file_to_save = os.path.join("analysis", "election_analysis.txt")
+# Create a filename variable to a direct or indirect path to the file.
+file_to_save = os.path.join("analysis", "election_analysis.txt")
 
 
     # Print the file object.
@@ -42,21 +74,3 @@ open(file_to_save, "w")
 
 
 
-#Test Message - Hellow world in output file
-#create a filename variable to a direct or indirect path file (i used unidrect)
-#file_to_save = os.path.join("analysis", "election_analysis.txt")
-
-#statement to open the file
-##replace this line with "with" statement outfile = open(file_to_save, "w"); 
-#with open(file_to_save, "w") as txt_file:
-
-#write data to file
-###--replaced due to with statement outfile.write("hello world")
-    ##replaced with the counties --txt_file.write("hello world, it's me paisley mae")
-    ### replaced to add each county on a new linetxt_file.write("Arapahoe, Denver, Jefferson")
-    ## add header "counties in election"
-    #txt_file.write("Counties in the Election")
-   #txt_file.write("\n_ _ _ _ _ _ _ _ _ _ _ _ _")
-    #txt_file.write("\nArapahoe\nDenver\nJefferson")
-#close file
-##-- this line is not needed due to "with" statment outfile.close()
