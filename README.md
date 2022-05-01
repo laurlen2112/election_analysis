@@ -5,7 +5,7 @@ Tom, a Colorado Board of Elections employee has asked me to complete the audit o
 
   1. The total number of votes cast.
   2. A complete list of candidates who received votes.
-  3. Calculate the votes on per candidate
+  3. Calculate the votes on per candidate.
   4. Calculate the percentage of votes each candidate won.
   5. Determine the winner of the election based on popular vote.
   6. Determine voter turnout by county.
