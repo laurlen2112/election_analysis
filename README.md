@@ -12,7 +12,7 @@ A Colorado Board of Elections employee has given me the following tasks in order
 ## Resources
 * Data Source: election_results.csv
 * Software: 
-  * Python 3.9.7
+  * Python 3.7.9
   * Visual Studio Code, 1.66.2
 
 ## Summary 
