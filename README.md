@@ -44,7 +44,7 @@ The analysis of the election shows that:
   * Denver had the largest turnout by county with 306,055 votes cast and a 82.8% turnout.
   
 ## Challenge Overview
-The intial purpose of this project was to tabulate election results for a recent congressional vote.  Once that task was complete, the election  
+The intial purpose of this project was to tabulate election results for a recent congressional election.  Once that task was complete, the election  
 commission requested that the code be modified to track county turnout.
 
 ## Election Audit Summary  
