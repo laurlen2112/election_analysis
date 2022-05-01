@@ -1,7 +1,7 @@
 # Election Analysis
 
 ## Project Overview
-Tom, a Colorado Board of Elections employee has asked me to complete the audit of a recent local congressional election and provide the following data points:
+Tom, a Colorado Board of Elections employee, has asked me to complete the audit of a recent local congressional election and provide the following data points:
 
   1. The total number of votes cast.
   2. A complete list of candidates who received votes.
